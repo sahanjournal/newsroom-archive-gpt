@@ -31,6 +31,8 @@ For the categories_exclude command, we are telling the chatbot to exclude all sp
 
 ### GPT Action Script (for WordPress sites):
 Click on “Create new action,” and insert the action script (see [`newsroom-archive-setup.txt`](https://github.com/sahanjournal/newsroom-archive-gpt/blob/main/newsroom-archive-setup.txt)) into the schema in your GPT configuration.
+
+!important: Make sure to modify the script and insert your organization's name and url.
 <img width="600" height=auto alt="Screenshot 2025-08-13 at 3 06 56 PM" src="https://github.com/user-attachments/assets/3a93b724-a3ff-45d0-b30b-b1e69b5c86fd" />
 
 Once you've inserted the script, you should see the “Available actions” pop up below the script.
