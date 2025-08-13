@@ -1,0 +1,185 @@
+openapi: 3.1.0
+info:
+  title: Sahan Journal Post API
+  description: API for retrieving Sahan Journal Posts via the REST API.
+  version: 1.0.0
+servers:
+  - url: https://sahanjournal.com/wp-json/wp/v2
+    description: Sahan Journal REST API server
+paths:
+  /posts:
+    get:
+      summary: Get a list of posts
+      description: Retrieve a list of posts with optional filters.
+      operationId: getPosts
+      parameters:
+        - name: status
+          in: query
+          description: Limit results to posts with one or more specific statuses.
+          schema:
+            type: string
+            enum:
+              - publish
+              - future
+              - draft
+              - pending
+              - private
+        - name: categories
+          in: query
+          description: Limit results to posts from specific categories by category IDs.
+          schema:
+            type: string
+        - name: categories_exclude
+          in: query
+          description: Exclude posts from specific categories by category IDs.
+          schema:
+            type: string
+        - name: tags
+          in: query
+          description: Limit results to posts with specific tags by tag IDs.
+          schema:
+            type: string
+        - name: search
+          in: query
+          description: Limit results to those matching a string in the post title or content.
+          schema:
+            type: string
+        - name: orderby
+          in: query
+          description: Sort collection by a field.
+          schema:
+            type: string
+            enum:
+              - date
+              - relevance
+              - id
+              - include
+              - title
+              - slug
+        - name: order
+          in: query
+          description: Order sort attribute ascending or descending.
+          schema:
+            type: string
+            enum:
+              - asc
+              - desc
+        - name: page
+          in: query
+          description: Current page of the collection.
+          schema:
+            type: integer
+            default: 1
+        - name: per_page
+          in: query
+          description: Maximum number of items to be returned in the result set.
+          schema:
+            type: integer
+            default: 10
+        - name: author
+          in: query
+          description: Limit results to posts assigned to specific authors.
+          schema:
+            type: string
+        - name: exclude
+          in: query
+          description: Ensure result set excludes specific post IDs.
+          schema:
+            type: array
+            items:
+              type: integer
+        - name: include
+          in: query
+          description: Limit result set to specific post IDs.
+          schema:
+            type: array
+            items:
+              type: integer
+        - name: slug
+          in: query
+          description: Limit result set to posts with a specific slug.
+          schema:
+            type: string
+        - name: _fields
+          in: query
+          description: Limit the fields returned in the response (comma-separated list).
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A list of posts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Post"
+        "400":
+          description: Invalid request
+        "401":
+          description: Unauthorized
+  /posts/{id}:
+    get:
+      summary: Get a specific post by ID
+      description: Retrieve a single post by its ID.
+      operationId: getPostById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The ID of the post to retrieve.
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: A single post
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Post"
+        "400":
+          description: Invalid ID supplied
+        "404":
+          description: Post not found
+components:
+  schemas:
+    Post:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique identifier for the post.
+        title:
+          type: object
+          properties:
+            rendered:
+              type: string
+              description: The title of the post.
+        content:
+          type: object
+          properties:
+            rendered:
+              type: string
+              description: The content of the post.
+        excerpt:
+          type: object
+          properties:
+            rendered:
+              type: string
+              description: The excerpt of the post.
+        status:
+          type: string
+          description: The status of the post (publish, draft, etc.).
+        link:
+          type: string
+          description: URL to the post.
+        date:
+          type: string
+          format: date-time
+          description: The date the post was published.
+        slug:
+          type: string
+          description: URL-friendly post slug.
+        author:
+          type: integer
+          description: The ID of the author of the post.
