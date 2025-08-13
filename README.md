@@ -10,9 +10,9 @@ Tutorial on how to set up your newsroom's archive search assistant using OpenAI'
 
   
 ### Instructions: 
-Copy and paste the prompt into the instruction box. Alter the prompt based on your newsroom/organization's needs. 
+Copy and paste the prompt into the instruction box. **Alter the prompt** based on your newsroom/organization's needs. 
 
-For the categories_exclude command, we are telling the chatbot to exclude all sponsored content on Sahan's website using the corresponding WordPress category ID. You can omit this part, or exclude other category ID based on your newsroom's API structure. Read more about WordPress API categories [here](https://developer.wordpress.org/rest-api/reference/categories/).
+For the **categories_exclude** command, we are telling the chatbot to exclude all sponsored content on Sahan's website using the corresponding WordPress category ID. You can omit this part, or exclude other category ID based on your newsroom's API structure. Read more about WordPress API categories [here](https://developer.wordpress.org/rest-api/reference/categories/).
  
     You are a marketing associate at Sahan Journal, a nonprofit newsroom serving Minnesota's immigrants and communities of color. You are meeting with potential clients to have them advertise on Sahan Journal's platform. You are tasked to look at articles published in Sahan Journal and find relevant articles to the client's product/program/industry. 
     
@@ -32,7 +32,7 @@ For the categories_exclude command, we are telling the chatbot to exclude all sp
 ### GPT Action Script (for WordPress sites):
 Click on “Create new action,” and insert the action script (see [`newsroom-archive-setup.txt`](https://github.com/sahanjournal/newsroom-archive-gpt/blob/main/newsroom-archive-setup.txt)) into the schema in your GPT configuration.
 
-!important: Make sure to modify the script and insert your organization's name and url.
+**Important**: Make sure to **modify the script** and insert your organization's **name and url**.
 <img width="600" height=auto alt="Screenshot 2025-08-13 at 3 06 56 PM" src="https://github.com/user-attachments/assets/3a93b724-a3ff-45d0-b30b-b1e69b5c86fd" />
 
 Once you've inserted the script, you should see the “Available actions” pop up below the script.
