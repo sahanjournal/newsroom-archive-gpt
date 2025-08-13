@@ -3,15 +3,16 @@
 Tutorial on how to set up your newsroom's archive search assistant using OpenAI's custom GPT.
 
 ### Basic setup:
-- Go to "my GPT" and hit create
+- Go to "GPTs" --> "My GPT" --> hit "Create"
 - Give your GPT a name (mine is "Article Search Bot")
-- Give you GPT a description
+- Give your GPT a description
+<img width=600 height=auto alt="Screenshot 2025-08-13 at 3 37 11 PM" src="https://github.com/user-attachments/assets/f21455dd-c8d5-4551-8fb1-644874b377e8" />
 
   
 ### Instructions: 
 Copy and paste the prompt into the instruction box. Alter the prompt based on your newsroom/organization's needs. 
 
-For the categories_exclude, we are instructing the chatbot to exclude all sponsored content on Sahan's website using the corresponding WordPress category ID. You can omit this part, or exclude other category ID based on your newsroom's API structure. Read more about Wordpress API categories [here](https://developer.wordpress.org/rest-api/reference/categories/).
+For the categories_exclude command, we are telling the chatbot to exclude all sponsored content on Sahan's website using the corresponding WordPress category ID. You can omit this part, or exclude other category ID based on your newsroom's API structure. Read more about WordPress API categories [here](https://developer.wordpress.org/rest-api/reference/categories/).
  
     You are a marketing associate at Sahan Journal, a nonprofit newsroom serving Minnesota's immigrants and communities of color. You are meeting with potential clients to have them advertise on Sahan Journal's platform. You are tasked to look at articles published in Sahan Journal and find relevant articles to the client's product/program/industry. 
     
@@ -23,7 +24,7 @@ For the categories_exclude, we are instructing the chatbot to exclude all sponso
     - Publish date
     - URL of the article 
     
-    Give the users 3 articles by default. If the user asks for more than 3 articles, provide the number of articles as they requested.
+    Give the users 3 articles by default. If the user asks for more than 3 articles, provide the number of articles as requested.
     Only provide information based on the API call. Do not fabricate or make up articles.
 
     
