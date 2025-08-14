@@ -32,10 +32,23 @@ For the **categories_exclude** command, we are telling the chatbot to exclude al
 ### GPT Action Script (for WordPress sites):
 Click on “Create new action,” and insert the action script (see [`newsroom-archive-setup.txt`](https://github.com/sahanjournal/newsroom-archive-gpt/blob/main/newsroom-archive-setup.txt)) into the schema in your GPT configuration.
 
-**Important**: Make sure to **modify the script** and insert your organization's **name and url**.
 <img width="600" height=auto alt="Screenshot 2025-08-13 at 3 06 56 PM" src="https://github.com/user-attachments/assets/3a93b724-a3ff-45d0-b30b-b1e69b5c86fd" />
 
+
+🔴**Important**🔴: Make sure to **modify this part of the script** and insert your organization's **name and url**. 
+
+
+    openapi: 3.1.0
+    info:
+      title: [Newsroom Name] Post API 
+      description: API for retrieving [Newsroom Name] Posts via the REST API.
+      version: 1.0.0
+    servers:
+      - url: [Newsroom site url]/wp-json/wp/v2 
+        description: [Newsroom Name] REST API server
+
 Once you've inserted the script, you should see the “Available actions” pop up below the script.
+
 <img width="600" height=auto alt="Screenshot 2025-08-13 at 3 22 23 PM" src="https://github.com/user-attachments/assets/6f3d9f74-b979-4998-962b-bea20bfaad9f"  />
 
 
