@@ -2,14 +2,18 @@
 
 Tutorial on how to set up your newsroom's archive search assistant using OpenAI's custom GPT.
 
-### Basic setup:
+Basic setup:
+-
+
 - Go to "GPTs" --> "My GPT" --> hit "Create"
 - Give your GPT a name (mine is "Article Search Bot")
 - Give your GPT a description
 <img width=600 height=auto alt="Screenshot 2025-08-13 at 3 37 11 PM" src="https://github.com/user-attachments/assets/f21455dd-c8d5-4551-8fb1-644874b377e8" />
 
   
-### Instructions: 
+Instructions: 
+-
+
 Copy and paste the prompt into the instruction box. **Alter the prompt** based on your newsroom/organization's needs. 
 
 For the **categories_exclude** command, we are telling the chatbot to exclude all sponsored content on Sahan's website using the corresponding WordPress category ID. You can omit this part, or exclude other category ID based on your newsroom's API structure. Read more about WordPress API categories [here](https://developer.wordpress.org/rest-api/reference/categories/).
@@ -29,7 +33,9 @@ For the **categories_exclude** command, we are telling the chatbot to exclude al
 
     
 
-### GPT Action Script (for WordPress sites):
+GPT Action Script (for WordPress sites)
+-
+
 Click on “Create new action,” and insert the action script (see [`newsroom-archive-setup.txt`](https://github.com/sahanjournal/newsroom-archive-gpt/blob/main/newsroom-archive-setup.txt)) into the schema in your GPT configuration.
 
 <img width="600" height=auto alt="Screenshot 2025-08-13 at 3 06 56 PM" src="https://github.com/user-attachments/assets/3a93b724-a3ff-45d0-b30b-b1e69b5c86fd" />
@@ -60,5 +66,7 @@ This is what the output (usually) looks like:
 <img width=700 height=auto alt="Screenshot 2025-08-13 at 3 17 32 PM" src="https://github.com/user-attachments/assets/111c8eb9-5168-4701-8cb2-c8c723c392e0" />
 
 
-### Important note:
+Important note:
+-
+
 Make sure to disable the Web Search function if you want to prevent the GPT from drawing sources from the internet.
