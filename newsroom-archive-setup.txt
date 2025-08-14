@@ -1,11 +1,11 @@
 openapi: 3.1.0
 info:
-  title: Sahan Journal Post API
-  description: API for retrieving Sahan Journal Posts via the REST API.
+  title: [Newsroom Name] Post API 
+  description: API for retrieving [Newsroom Name] Posts via the REST API.
   version: 1.0.0
 servers:
-  - url: https://sahanjournal.com/wp-json/wp/v2
-    description: Sahan Journal REST API server
+  - url: [Newsroom site url]/wp-json/wp/v2 
+    description: [Newsroom Name] REST API server
 paths:
   /posts:
     get:
