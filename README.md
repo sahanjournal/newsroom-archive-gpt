@@ -1,4 +1,4 @@
-# Sahan Journal newsroom archive GPT setup
+# Newsroom archive assistant GPT tutorial
 
 Tutorial on how to set up your newsroom's archive search assistant using OpenAI's custom GPT.
 
