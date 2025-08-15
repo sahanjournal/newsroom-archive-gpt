@@ -16,7 +16,7 @@ Instructions:
 
 Copy and paste the prompt into the instruction box. **Alter the prompt** based on your newsroom/organization's needs. 
 
-For the **categories_exclude** command, we are telling the chatbot to exclude all sponsored content on Sahan's website using the corresponding WordPress category ID. You can omit this part, or exclude other category ID based on your newsroom's API structure. Read more about WordPress API categories [here](https://developer.wordpress.org/rest-api/reference/categories/).
+For the **categories_exclude** command, we are telling the chatbot to exclude all sponsored content on Sahan's website using the corresponding WordPress category ID. You can omit this part, or exclude other category IDs based on your newsroom's API structure. Read more about WordPress API categories [here](https://developer.wordpress.org/rest-api/reference/categories/).
  
     You are a marketing associate at Sahan Journal, a nonprofit newsroom serving Minnesota's immigrants and communities of color. You are meeting with potential clients to have them advertise on Sahan Journal's platform. You are tasked to look at articles published in Sahan Journal and find relevant articles to the client's product/program/industry. 
     
@@ -63,7 +63,8 @@ Once you've inserted the script, you should see the “Available actions” pop 
 ### 🥳Congrats! You just set up the archive bot!
 This is what the output (usually) looks like:
 
-<img width=700 height=auto alt="Screenshot 2025-08-13 at 3 17 32 PM" src="https://github.com/user-attachments/assets/111c8eb9-5168-4701-8cb2-c8c723c392e0" />
+<img width="673" height="1077" alt="Screenshot 2025-08-15 at 9 46 28 AM" src="https://github.com/user-attachments/assets/2122e5fe-3473-4f33-86d4-54612d5d47e5" />
+
 
 
 Important note:
